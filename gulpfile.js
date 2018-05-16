@@ -13,6 +13,7 @@ gulp.task('css', () => {
       }))
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(gulp.dest('./dist/css/'))
+    gulp.watch('./src/css/*.css', ['css'])
   });
 
   gulp.task('imagemin', () => {
